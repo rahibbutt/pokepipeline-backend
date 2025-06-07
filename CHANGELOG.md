@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.1.0...v1.2.0) (2025-06-07)
+
+
+### Features
+
+* add testing in ci workflow ([eb3b29c](https://github.com/rahibbutt/pokepipeline-backend/commit/eb3b29c336aafb27315c6797dd90ce11d7c54c72))
+
 # [1.1.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.0.0...v1.1.0) (2025-06-07)
 
 
