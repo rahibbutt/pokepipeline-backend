@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.3.0...v1.3.1) (2025-06-07)
+
+
+### Bug Fixes
+
+* remove node_modules folder from git ([20fcad1](https://github.com/rahibbutt/pokepipeline-backend/commit/20fcad136586d8d761a9b0f3285d24b990f022a6))
+
 # [1.3.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.2.0...v1.3.0) (2025-06-07)
 
 
