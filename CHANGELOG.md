@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.4.0...v1.5.0) (2025-06-07)
+
+
+### Features
+
+* setup production docker image build in CD workflow ([20d64a2](https://github.com/rahibbutt/pokepipeline-backend/commit/20d64a20f9851eab97e4d97fef57cbe6efd627df))
+
 # [1.4.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.3.1...v1.4.0) (2025-06-07)
 
 
