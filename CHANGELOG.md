@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.2.0...v1.3.0) (2025-06-07)
+
+
+### Features
+
+* remove dist folder from git ([7c32446](https://github.com/rahibbutt/pokepipeline-backend/commit/7c32446273d957bd0cfe87a767eadc0a35abf865))
+
 # [1.2.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.1.0...v1.2.0) (2025-06-07)
 
 
