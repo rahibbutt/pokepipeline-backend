@@ -16,9 +16,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - run: npm install
-      - run: npm run build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+      - name: Get latest tag
+        id: get_tag
+        run: echo "tag=$(git describe --tags --abbrev=0)" >> "$GITHUB_OUTPUT"
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build production docker image
+        run: docker build -t rahibbutt/backend:${{ steps.get_tag.outputs.tag }} -t rahibbutt/backend:latest .
+      - name: Push docker image
+        run: | 
+          docker push rahibbutt/backend:${{ steps.get_tag.outputs.tag }}
+          docker push rahibbutt/backend:latest
