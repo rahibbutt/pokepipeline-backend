@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.3.1...v1.4.0) (2025-06-07)
+
+
+### Features
+
+* add dev command to run local dev server ([f0c4782](https://github.com/rahibbutt/pokepipeline-backend/commit/f0c47822dec2323e68e53794b738e0062390d6b5))
+
 ## [1.3.1](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.3.0...v1.3.1) (2025-06-07)
 
 
