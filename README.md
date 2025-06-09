@@ -8,11 +8,7 @@ the project is also available as a [Docker-ready](https://hub.docker.com/r/rahib
 image for fast and consistent deployment.
 
 ## Run production-ready build locally using docker image
-1. Pull docker image from Dockerhub:
-```
-docker pull rahibbutt/backend:latest
-```
-2. Run Docker image locally:
+1. Run Docker image locally:
 ```
 docker run -p 3000:80 rahibbutt/backend
 ```
@@ -22,7 +18,7 @@ Access the local server at: [http://localhost:3000](http://localhost:3000)
 
 
 
-## Run production-ready build locally by cloning Github repository
+## Run project locally by cloning Github repository
 1. Git clone using the web URL:
 ```
 https://github.com/rahibbutt/pokepipeline-backend.git
@@ -39,6 +35,9 @@ npm run build
 ```
 npx ts-node src/index.ts
 ```
+Access the local server at: [http://localhost:3000](http://localhost:3000)
+- **API endpoint 1** – Get all Pokémon data: [http://localhost:3000/api/pokemon](http://localhost:3000/api/pokemon)
+- **API endpoint 2** – Trigger ETL pipeline: [http://localhost:3000/api/trigger-pipeline](http://localhost:3000/api/trigger-pipeline)
 
 ## 📦 Technologies used
 
