@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.8.0...v1.9.0) (2025-06-09)
+
+
+### Features
+
+* Updated README.md ([1a04f78](https://github.com/rahibbutt/pokepipeline-backend/commit/1a04f785fc736f8c9b1692d80a70474c8dbdbcf2))
+
 # [1.8.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.7.0...v1.8.0) (2025-06-09)
 
 
