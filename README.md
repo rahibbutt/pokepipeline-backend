@@ -2,8 +2,8 @@
 
 Pokepipeline-backend is a production-ready ETL (Extract, Transform, Load) pipeline built
 using Node.js, TypeScript and Express. It fetches, processes and stores Pokémon
-data from the [PokeAPI](https://pokeapi.co/) into a structured SQL database (SQLite
-3). Designed for modularity, semantic versioning and CI/CD integration,
+data from the [PokeAPI](https://pokeapi.co/) into a 
+structured SQL database (SQLite 3) and displays on the [pokepipeline-frontend](https://github.com/rahibbutt/pokepipeline-frontend) single-page application. Designed for modularity, semantic versioning and CI/CD integration,
 the project is also available as a [Docker-ready](https://hub.docker.com/r/rahibbutt/backend) 
 image for fast and consistent deployment.
 
