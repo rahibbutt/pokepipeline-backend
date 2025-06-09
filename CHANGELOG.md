@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.6.0...v1.7.0) (2025-06-09)
+
+
+### Features
+
+* sqllite node error ([bed0836](https://github.com/rahibbutt/pokepipeline-backend/commit/bed0836789401563854cf8cc1f9bb59d2793fb47))
+
 # [1.6.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.5.0...v1.6.0) (2025-06-07)
 
 
