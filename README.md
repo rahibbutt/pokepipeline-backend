@@ -25,7 +25,7 @@ Access the local server at: [http://localhost:3000](http://localhost:3000)
 ## Run production-ready build locally by cloning Github repository
 1. Git clone using the web URL:
 ```
-https://github.com/rahibbutt/pokepipeline-frontend.git
+https://github.com/rahibbutt/pokepipeline-backend.git
 ```
 2. Install npm dependencies:
 ```
