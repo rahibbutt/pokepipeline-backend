@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - 'feature/**'
+      - 'bugfix/**'
   pull_request:
     branches:
       - 'feature/**'
+      - 'bugfix/**'
 
 jobs:
   ci:
