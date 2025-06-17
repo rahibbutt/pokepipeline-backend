@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.12.0...v1.13.0) (2025-06-17)
+
+
+### Features
+
+* setup lint command in ci ([9060ff6](https://github.com/rahibbutt/pokepipeline-backend/commit/9060ff664e17a2e71d46c66d898e897a74ffcf0d))
+
 # [1.12.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.11.0...v1.12.0) (2025-06-17)
 
 
