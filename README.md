@@ -2,63 +2,75 @@
 
 Pokepipeline-backend is a production-ready ETL (Extract, Transform, Load) pipeline built
 using Node.js, TypeScript and Express. It fetches, processes and stores Pokémon
-data from the [PokeAPI](https://pokeapi.co/) into a 
+data from the [PokeAPI](https://pokeapi.co/) into a
 structured SQL database (SQLite 3) and displays on the [pokepipeline-frontend](https://github.com/rahibbutt/pokepipeline-frontend) single-page application. Designed for modularity, semantic versioning and CI/CD integration,
-the project is also available as a [Docker-ready](https://hub.docker.com/r/rahibbutt/backend) 
+the project is also available as a [Docker-ready](https://hub.docker.com/r/rahibbutt/backend)
 image for fast and consistent deployment.
 
 ## Run production-ready build locally using docker image
+
 1. Run Docker image locally:
+
 ```
 docker run -p 3000:80 rahibbutt/backend
 ```
+
 Access the local server at: [http://localhost:3000](http://localhost:3000)
+
 - **API endpoint 1** – Get all Pokémon data: [http://localhost:3000/api/pokemon](http://localhost:3000/api/pokemon)
 - **API endpoint 2** – Trigger ETL pipeline: [http://localhost:3000/api/trigger-pipeline](http://localhost:3000/api/trigger-pipeline)
 
-
-
 ## Run project locally by cloning Github repository
+
 1. Git clone using the web URL:
+
 ```
 https://github.com/rahibbutt/pokepipeline-backend.git
 ```
+
 2. Install npm dependencies:
+
 ```
 npm install
 ```
+
 3. Build the project:
+
 ```
 npm run build
 ```
+
 4. Run project locally:
+
 ```
 npx ts-node src/index.ts
 ```
+
 Access the local server at: [http://localhost:3000](http://localhost:3000)
+
 - **API endpoint 1** – Get all Pokémon data: [http://localhost:3000/api/pokemon](http://localhost:3000/api/pokemon)
 - **API endpoint 2** – Trigger ETL pipeline: [http://localhost:3000/api/trigger-pipeline](http://localhost:3000/api/trigger-pipeline)
 
 ## 📦 Technologies used
 
-* Node.js + TypeScript
-* Express
-* SQLite 3
-* Docker
-* Semantic versioning
-* GitHub Actions (CI/CD)
-* ESLint, Prettier, Jest (for code quality and testing)
-* PM2 process manager (automatic application monitoring)
+- Node.js + TypeScript
+- Express
+- SQLite 3
+- Docker
+- Semantic versioning
+- GitHub Actions (CI/CD)
+- ESLint, Prettier, Jest (for code quality and testing)
+- PM2 process manager (automatic application monitoring)
 
 ## Database schema overview
 
-The project uses a normalized SQL schema designed around 
+The project uses a normalized SQL schema designed around
 core Pokémon data. To support structured queries, avoid
-redundancy and maintain data integrity, the data is 
-transformed and normalized into relational tables. 
+redundancy and maintain data integrity, the data is
+transformed and normalized into relational tables.
 This includes flattening nested attributes such as types,
 abilities, and stats and mapping them into lookup and
-join tables. Below is an overview of the key 
+join tables. Below is an overview of the key
 tables:
 
 Pokémon tables stores the basic information:
@@ -70,7 +82,9 @@ CREATE TABLE pokemons (
     sprite_url TEXT
 );
 ```
+
 Lookup tables for reusable Pokémon attributes:
+
 ```sql
 CREATE TABLE types (
                        id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -87,7 +101,9 @@ CREATE TABLE stats (
                        name TEXT UNIQUE NOT NULL
 );
 ```
+
 Many-to-many relationship between Pokémon and their types:
+
 ```sql
 CREATE TABLE pokemon_types (
                                pokemon_id INTEGER,
@@ -98,8 +114,10 @@ CREATE TABLE pokemon_types (
                                FOREIGN KEY (type_id) REFERENCES types(id)
 );
 ```
-Maps Pokémon to their abilities, including hidden status 
+
+Maps Pokémon to their abilities, including hidden status
 and slot.
+
 ```sql
 CREATE TABLE pokemon_abilities (
                                    pokemon_id INTEGER,
@@ -111,7 +129,9 @@ CREATE TABLE pokemon_abilities (
                                    FOREIGN KEY (ability_id) REFERENCES abilities(id)
 );
 ```
+
 Connects Pokémon to their base stats (e.g., HP, Attack):
+
 ```sql
 CREATE TABLE pokemon_stats (
                                pokemon_id INTEGER,
@@ -140,4 +160,3 @@ During the design and development of this project, the following assumptions wer
 - Perform unit testings for all the functions.
 - Expose some of the transformed Pokémon data via a GraphQL API.
 - Handle complex transformations and relationships.
-
