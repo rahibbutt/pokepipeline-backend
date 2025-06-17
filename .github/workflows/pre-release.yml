@@ -3,7 +3,7 @@ name: Pre-release
 on:
   push:
     branches:
-      - 'canary'
+      - "canary"
 
 permissions:
   contents: read # for checkout

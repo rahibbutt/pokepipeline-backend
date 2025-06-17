@@ -3,7 +3,7 @@ name: Continuous Deployment
 on:
   push:
     branches:
-      - 'main'
+      - "main"
 
 permissions:
   contents: write
@@ -34,6 +34,6 @@ jobs:
       - name: Build production docker image
         run: docker build -t rahibbutt/backend:${{ steps.get_tag.outputs.tag }} -t rahibbutt/backend:latest .
       - name: Push docker image
-        run: | 
+        run: |
           docker push rahibbutt/backend:${{ steps.get_tag.outputs.tag }}
           docker push rahibbutt/backend:latest
