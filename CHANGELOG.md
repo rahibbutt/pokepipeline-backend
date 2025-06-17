@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.13.0...v1.14.0) (2025-06-17)
+
+
+### Features
+
+* configure typescript-eslint to use prettier ([1fd7579](https://github.com/rahibbutt/pokepipeline-backend/commit/1fd7579e83115421095c22c9a1dd7ab440faef53))
+
 # [1.13.0](https://github.com/rahibbutt/pokepipeline-backend/compare/v1.12.0...v1.13.0) (2025-06-17)
 
 
